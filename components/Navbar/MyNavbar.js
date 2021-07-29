@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 
-import styles from '../styles/navbar.module.scss';
+import styles from '../../styles/navbar.module.scss';
 
 const MyNavbar = () => {
 
@@ -13,8 +13,8 @@ const MyNavbar = () => {
 
   return (
     <nav className={styles.nav}>
-      {isOpen ?
-      <ul>
+
+      <ul className={isOpen ? styles.ulOpen : styles.ulClosed}>
         <li>
           <Link href='/'>Home</Link>
           <Link href='/experience'>Experience</Link>
@@ -22,8 +22,8 @@ const MyNavbar = () => {
           <Link href='/api'>Projects</Link>
         </li>
       </ul>
-      :
-      null}
+
+
       <div
         className={styles.toggleNavbar}
         onClick={toggleNavbar}

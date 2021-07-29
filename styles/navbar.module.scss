@@ -16,5 +16,12 @@
 
 .toggleNavbar {
   cursor: pointer;
-  
+}
+
+.ulClosed {
+  visibility: hidden;
+}
+
+.ulOpen {
+  visibility: visible;
 }
